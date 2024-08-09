@@ -1,0 +1,280 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+     Family:Rubik;
+    src:url("https://fonts.google.com/specimen/Rubik");
+}
+body{
+   background-color: #fcfbfb; 
+    font-family: Rubik,sans-serif;
+    position: relative;
+}
+body::before{
+    content:"";
+    position: absolute;
+    background:linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    width: 350px;
+    height: 85%;
+   border-bottom-left-radius: 0;
+    border-bottom-right-radius:70%;
+   z-index: -5;
+   top: 0;
+   left: 0;
+}
+body::after{
+    background-color:hsl(270, 20%, 96%);;
+    content: "";
+    position: absolute;
+  width: 350px;
+  height: 600px;
+  border-top-left-radius: 70%;
+    border-top-right-radius:0;
+   z-index: -5;
+   right: 0;
+   bottom: 0;
+
+}
+main{
+    width: 70%;
+   height: 100%;
+   display: flex;
+   gap: 50px;
+   place-items: center;
+   margin: 0px auto;
+   padding: 10px 0px;
+}
+.card{
+    max-width: 300px;
+    border: 10px solid white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: hsl(270, 20%, 96%);
+    box-shadow: 1px 1px 8px 0 rgba(0,0,0,.1);
+    margin: 10px 0px;
+}
+.card .card_header{
+    position:relative;
+    background: linear-gradient(114deg,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin: 0px auto;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.card .card_header::before{
+    content: "";
+    background-color: white;
+    top: 0;
+    left: 75px;
+    width: 50%;
+    height: 20px;
+    position: absolute;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    
+}
+.card .card_header .user{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    float: left;
+    padding: 5px;
+}
+.card .card_header .user img{
+    width: 30px;
+    height: 30px;
+    border:1px solid white;
+    border-radius: 50%;
+}
+.card .card_header .user span{
+    color: white;
+    font-size: 16px;
+    padding: 0px 10px;
+}
+.card .card_header .user h3{
+    color: hsl(276, 100%, 81%);
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.card  .card_header .user p{
+    color: hsl(276, 100%, 81%);
+    font-size: 14px;
+    font-weight: 200;
+}
+.card .card_header .dots{
+    position: relative;
+    width: 30px;
+    padding: 5px 10px;
+    margin: 0px auto;
+    cursor: pointer;
+    float: right;
+}
+.card .card_header .dots span{
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+  position: relative;
+}
+.card .card_header .dots span::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 10px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}
+.card .card_header .dots span::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    bottom: -20px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.card .card_body{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.card .card_body .flex1{
+   align-self: flex-start;
+  width: 80%;
+}
+.card .card_body .flex1 p{
+    background-color: hsl(270, 7%, 64%);
+    color: hsl(276, 55%, 52%);
+    margin-top: 10px;
+    padding: 13px;
+    border-radius: 15px;
+    font-size: 13px;
+    display: block;
+}
+.card .card_body .flex2{
+    width: 70%;
+   align-self: flex-end;
+}
+.card .card_body .flex2 .images{
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    justify-content: center;
+}
+.card .card_body .flex2 .images img{
+    width: 40px;
+    border-radius: 5px;
+}
+.card .card_body .flex2 p{
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    display: block;
+    color: hsl(271, 15%, 43%);
+    font-size: 13px;
+    border-radius: 15px;
+    
+}
+.card .card_body .flex3{
+    align-self: flex-start;
+    width: 80%;
+}
+.card_body .flex3 p{
+    background-color: hsl(270, 7%, 64%);
+    color: hsl(276, 55%, 52%);
+    margin-top: 10px;
+    padding: 13px;
+    border-radius: 15px;
+    font-size: 13px;
+    display: block;
+}
+.card_body .flex3 .box {
+    background:linear-gradient(114deg,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 7px;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+.card_body .flex3 .box span{
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(276, 100%, 81%);
+    border-radius: 50%;
+}
+.card_body .flex3 .box p{
+    background-color: transparent;
+    color: white;
+    padding: 0px;
+    line-height: 10px;
+}
+.card_body .flex3 .box h2{
+    color:white;
+    font-size: 16px;
+}
+.card .card_body .flex-center{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    background-color: white;
+    border-radius: 15px;
+}
+.card .card_body .flex-center p{
+    color: hsl(270, 7%, 64%);
+    font-size: 14px;
+    margin: 0px;
+}
+.card .card_body .flex-center button{
+    border: none;
+    background-color: hsl(271, 36%, 24%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+}
+.container{
+    width: 70%;
+    padding: 10px;
+}
+.container p{
+    color: hsl(270, 7%, 64%);
+    line-height: 25px;
+    width: 80%;
+    
+
+}
+.container h1{
+    color: hsl(271, 36%, 24%);
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px){
+    main{
+        flex-direction: column;
+    }
+    .container{
+        width: 100%;
+    }
+    .container p{
+        width: 100%;
+    }
+}
